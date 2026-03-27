@@ -37,11 +37,17 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare two int variables (a and b)
+    // Type name assignment ( = ) value
+    // Type name ;
+    int a, b;
+    
 
     // TODO: Prompt the user and read both values with cin
-
-    // TODO: Print "Sum = " followed by the result
-
+    // cout << "message"
+    cout << "enter two integers:";
+    cin >>a >> b;
+    // TODO: Print "Sum;= " followed by the result
+    cout << "sum = " << (a + b ) << endl;
     cout << endl;
 
     // -----------------------------------------------------------------------
@@ -52,10 +58,13 @@ void section1_warmup() {
     // -----------------------------------------------------------------------
 
     // TODO: Declare a double variable for Celsius
-
+    double celsius;
     // TODO: Prompt and read the value
-
+   cout << " enter temperature in celcius";
+   cin >> celsius;
     // TODO: Calculate Fahrenheit and print it
+    double fahrenheit = celsius * 9.0 / 5.0 + 32.0;
+    cout << celsius << "C =" << fahrenheit << " F" <<endl;
 
     cout << endl;
 }
@@ -112,6 +121,18 @@ void section2_coreConcepts() {
     // -----------------------------------------------------------------------
     // Exercise 2.1
     // Ask the user for an integer. Print whether it is positive, negative,
+    int number;
+    
+    cout << "bir sayi gir: ";
+    cin >> number;
+    
+    if (number > 0){
+        cout << "positive " << endl;
+    } else if (number < 0){
+        cout << "negative " << endl;
+    } else {
+        cout << "sifir " << endl;
+    }
     // or zero using if / else if / else.
     // -----------------------------------------------------------------------
 
@@ -135,7 +156,19 @@ void section2_coreConcepts() {
     // TODO: Declare two ints, prompt, and read them
 
     // TODO: Write the if / else if / else chain
+int a, b;
 
+cout << "iki sayi giriniz: ";
+cin >> a >> b;
+
+if (a==b){
+    cout << "eşit" << endl;
+} else if (a > b){
+    cout << "birinci daha büyük" << endl;
+    
+} else {
+    cout << "ikinci daha büyük" << endl;
+}
     cout << endl;
 }
 
@@ -155,6 +188,19 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the even/odd checker
+    int sayi;
+    
+    cout << "bir sayi giriniz " << endl;
+    cin >> sayi;
+    
+    if (sayi % 2 == 0){
+        cout << "cift " << endl;
+    } else if (sayi == 0){
+        cout << "sifir " << endl;
+        
+    } else {
+        cout << "tek sayi " << endl;
+    }
 
     cout << endl;
 
@@ -172,6 +218,25 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the grade calculator
+    int grade;
+    
+    cout << "notunuzu giriniz " << endl;
+    cin >> grade;
+   if (grade < 0 || grade > 100) {
+       cout << "gecersiz not " << endl;
+   } else if (grade >= 90) {
+        cout << "A" << endl;
+    } else if (grade >= 80) {
+        cout << "B" << endl;
+    } else if (grade >= 70) {
+        cout << "C" << endl;
+    } else if (grade >= 60 ) {
+        cout << "D" << endl;
+    } else {
+        cout << "F" << endl;
+    }
+    
+    
 
     cout << endl;
 
@@ -187,6 +252,17 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the leap year checker
+    int year;
+    
+    cout << "bir yil girin " << endl;
+    cin >> year;
+    
+    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+        cout << "leap " << endl;
+        
+    } else {
+        cout << "not leap " << endl;
+    }
 
     cout << endl;
 
@@ -207,6 +283,25 @@ void section3_guidedExercises() {
     // -----------------------------------------------------------------------
 
     // TODO: Implement the triangle validator and classifier
+    double side1 , side2 , side3;
+    cout << "3 kenar giriniz " << endl;
+    cin >> side1 >> side2 >> side3;
+    
+    if ( side1 + side2 > side3 && side1 + side3 > side2 && side2 + side3 > side1 ){
+        cout << "valid üçgen " << endl;
+        
+     if ( side1 == side2 && side2 == side3) {
+        cout << "eskenar ucgen " << endl;
+    } else if ( side1 == side2 || side1 == side3 || side2 == side3){
+        cout << "ikizkenar ucgen" << endl;
+    } else {
+        cout << "esit kenar yok " << endl;
+    }
+    }else{
+        cout << "not a valid triangle " << endl;
+    }
+        
+        
 
     cout << endl;
 
